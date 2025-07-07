@@ -20,7 +20,7 @@ jobs:
         host: ${{secrets.DB_HOST}}
         username: ${{secrets.DB_USER}}
         key: ${{secrets.SSH_KEY}}
-        scripts:
+        script:
             echo "🚀 Boshlanmoqda loyihani yaratish yoki mavjud bo‘lsa yangilash..."
             mkdir -p /home/ubuntu/CI-CD
             cd /home/ubuntu/CI-CD
