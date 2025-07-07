@@ -29,14 +29,16 @@ export class UserService {
     const wherePost : Prisma.PostWhereInput | undefined = 
     post_title ? {title:{contains:post_title,mode:"insensitive"}} : undefined;
 
-    const user = await this.prisma.user.findMany(
+    const user = await this.prisma.$transaction([
+      this.prisma.user.count({where:{isActive:true}}),
+      this.prisma.user.findMany(
       {
         where:whereUser,
         include:{
           posts: post_title ? {where: wherePost} : true,
         }
       }
-    );
+     )]);
     return { data: user };
   }
 
