@@ -25,6 +25,7 @@ jobs:
             mkdir -p /home/ubuntu/new
             cd /home/ubuntu/new
 
+
             if [ ! -d ".git" ]; then
               echo "📥 Git repo clone qilinmoqda..."
               git clone https://github.com/aziz-davronov107/CI-CD.git .
@@ -42,4 +43,4 @@ jobs:
             echo "🔥 Docker konteynerlar ishga tushirilmoqda..."
             docker-compose up -d
 
-            echo "✅ Deploy muvaffaqiyatli yakunlandi!"
+            echo "✅ Deploy muvaffaqiyatli yakunlandi"
