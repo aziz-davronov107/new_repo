@@ -22,8 +22,8 @@ jobs:
         key: ${{secrets.SSH_KEY}}
         script: |
             echo "🚀 Boshlanmoqda loyihani yaratish yoki mavjud bo‘lsa yangilash..."
-            mkdir -p /home/ubuntu/CI-CD
-            cd /home/ubuntu/CI-CD
+            mkdir -p /home/ubuntu/new
+            cd /home/ubuntu/new
 
             if [ ! -d ".git" ]; then
               echo "📥 Git repo clone qilinmoqda..."
