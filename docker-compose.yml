@@ -4,7 +4,7 @@ version: "3.9"
 services:
   db:
     image: postgres:16
-    container_name: postgres_nest
+    container_name: new_post
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -17,7 +17,7 @@ services:
 
   app:
     build: .
-    container_name: app_nest
+    container_name: new_app
     ports:
       - "2030:3000"
     env_file:
