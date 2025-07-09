@@ -33,7 +33,6 @@ jobs:
               echo "🔄 Git repodan yangilanishlar olinmoqda..."
               git pull origin main
             fi
-
             echo "🧹 Docker konteynerlar to‘xtatilmoqda..."
             docker-compose down
 
