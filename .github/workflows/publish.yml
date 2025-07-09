@@ -21,13 +21,13 @@ jobs:
         key: ${{secrets.SSH_KEY}}
         script: |
             echo "🚀 Boshlanmoqda loyihani yaratish yoki mavjud bo‘lsa yangilash..."
-            mkdir -p /home/ubuntu/new
-            cd /home/ubuntu/new
+            mkdir -p /home/ubuntu/eski
+            cd /home/ubuntu/eski
 
 
             if [ ! -d ".git" ]; then
               echo "📥 Git repo clone qilinmoqda..."
-              git clone https://github.com/aziz-davronov107/CI-CD.git .
+              git clone https://github.com/aziz-davronov107/new_repo.git .
             else
               echo "🔄 Git repodan yangilanishlar olinmoqda..."
               git pull origin main
@@ -41,4 +41,4 @@ jobs:
             echo "🔥 Docker konteynerlar ishga tushirilmoqda..."
             docker-compose up -d
 
-            echo "✅ Deploy muvaffaqiyatli yakunlandi"
+            echo "✅ Deploy muvaffaqiyatli yakunlandi!!!!!!!!!!!!"
